@@ -62,6 +62,7 @@ $(document).ready(() => {
 
     if (vldt) {
       sender(vldt);
+      //location.href = `https://wa.me/8110246936?text=${vldt}`
     } else {
       alert("NO VALIDADO!!!");
     }
