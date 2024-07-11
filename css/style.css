@@ -7,9 +7,51 @@ body p, body h1, body h2, body h3, body h4, body h5, body h6 {
   padding: 0;
 }
 
+.main {
+  min-height: 100vh;
+  flex-direction: column;
+}
 .main .card .send {
   background: #25d366;
+  border-radius: 0;
   color: antiquewhite;
+}
+.main .frm {
+  margin-top: 30px;
+}
+.main .frm .err {
+  border: 0.5px solid #dc3545;
+}
+.main .frm .adv {
+  color: #dc3545;
+  display: none;
+  font-size: 0.8rem;
+  left: 30px;
+  position: absolute;
+  top: 52px;
+}
+.main .frm .dvSend {
+  align-items: baseline;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+.main .frm .dvSend p {
+  margin-left: 10px;
+}
+.main .ntf {
+  display: none;
+  width: 300px;
+}
+.main .ntf i {
+  color: #25d366;
+  font-size: 3rem;
+}
+
+@media screen and (max-width: 500px) {
+  .main .frm .adv {
+    top: 45px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

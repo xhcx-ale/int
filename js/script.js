@@ -13,10 +13,10 @@ $(document).ready(() => {
     if (!empArea || !empCel || !empName || !empNum || !empReq || !empSup) {
       inpts.forEach((input) => {
         if (!input.value) {
-          $(input).css("border", "0.5px solid #dc3545");
+          $(input).addClass('err');
           return false;
         } else {
-          $(input).css("border", "0.5px solid #dee2e6");
+          $(input).removeClass('err');
         }
       });
     } else {
@@ -51,7 +51,10 @@ $(document).ready(() => {
     };
     $.ajax(settings).done(function (response) {
       console.log(response);
-      alert(`\nSe envió ${msg}`);
+      //$('.frm').css('display', 'none')
+      $('.frm').fadeOut(500, () => {
+        $('.ntf').fadeIn(1000)
+      })
     });
   };
 
@@ -64,7 +67,7 @@ $(document).ready(() => {
       sender(vldt);
       //location.href = `https://wa.me/8110246936?text=${vldt}`
     } else {
-      alert("NO VALIDADO!!!");
+      $('.adv').css('display', 'inline')
     }
   });
 

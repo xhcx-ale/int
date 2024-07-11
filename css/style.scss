@@ -10,10 +10,55 @@ body {
 }
 
 .main {
+    min-height: 100vh;
+    flex-direction: column;
     .card {
         .send {
             background: #25d366;
+            border-radius: 0;
             color: antiquewhite;
+        }
+    }
+    .frm {
+        margin-top: 30px;
+        //width: 50%;
+        .err {
+            border: 0.5px solid #dc3545;
+        }
+        .adv {
+            color: #dc3545;
+            display: none;
+            font-size: 0.8rem;
+            left: 30px;
+            position: absolute;
+            top: 52px;
+            }
+        .dvSend {
+            align-items: baseline;
+            display: flex;
+            justify-content: space-between;
+            padding-top: 10px;
+            p {
+                margin-left: 10px;
+            }
+        }
+    }
+    .ntf {
+        display: none;
+        width: 300px;
+        i {
+            color: #25d366;
+            font-size: 3rem;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .main {
+        .frm {
+            .adv {
+                top: 45px;
+            }
         }
     }
 }

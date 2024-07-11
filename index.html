@@ -17,9 +17,9 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <nav class="navbar bg-body-tertiary">
+    <nav class="navbar bg-body-tertiary fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="index.html">
           <img
             src="/docs/5.3/assets/brand/bootstrap-logo.svg"
             alt="Logo"
@@ -32,13 +32,14 @@
       </div>
     </nav>
     <div
-      class="main container-fluid d-flex align-items-center justify-content-center vh-100"
+      class="main container-fluid d-flex align-items-center justify-content-center"
     >
-      <div class="card text-center">
+      <div class="card frm text-center mt-30">
         <div class="card-header">
           <h3>TEST</h3>
         </div>
         <div class="card-body">
+          <p class="adv">No dejes campos vacíos!</p>
           <form class="mForm" action="" method="post">
             <div class="input-group mt-2">
               <label for="name" class="input-group-text">Nombre Completo</label>
@@ -125,14 +126,26 @@
               />
             </div>
 
-            <div class="form-group mt-4 d-grid gap-2">
+            <div class="dvSend mt-2">
+              <p>Enviar</p>
               <button class="btn send">
-                Enviar <i class="bi bi-whatsapp"></i>
+                <i class="bi bi-send"></i>
               </button>
             </div>
           </form>
         </div>
       </div>
+
+      <div class="card ntf text-center">
+        <div class="card-header">
+          <h3>ENVIADO</h3>
+        </div>
+        <div class="card-body">
+          <i class="bi bi-check-circle-fill"></i>
+          <p>Su reporte ha sido enviado!</p>
+        </div>
+      </div>
+
     </div>
     <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"
